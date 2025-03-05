@@ -6,7 +6,7 @@ A PowerShell script to simplify adding entries to **Windows** and **WSL (Kali Li
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Features ✨
-- **Cross-Platform Support**: Updates hosts files for both Windows and WSL (Kali Linux).
+- **Cross-Platform Support**: Updates hosts files for both Windows and WSL (Kali Linux **ONLY**).
 - **Automatic Backups**: Creates `hosts.bak` on first run for easy recovery.
 - **Duplicate Prevention**: Skips existing entries to avoid clutter.
 - **Admin-Friendly**: Auto-elevates to admin rights when needed.

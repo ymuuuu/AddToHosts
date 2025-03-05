@@ -10,7 +10,7 @@ A PowerShell script to simplify adding entries to **Windows** and **WSL (Kali Li
 - **Automatic Backups**: Creates `hosts.bak` on first run for easy recovery.
 - **Duplicate Prevention**: Skips existing entries to avoid clutter.
 - **Admin-Friendly**: Auto-elevates to admin rights when needed.
-- **Simple UI**: Interactive prompts and color-coded status messages.
+
 
 ## Installation 📥
 1. **Prerequisites**:

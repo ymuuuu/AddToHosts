@@ -1,5 +1,19 @@
 # AddTo-Hosts.ps1
 
+# Display ASCII Art
+Write-Host @"
+              _     _ _______    _    _           _       
+     /\      | |   | |__   __|  | |  | |         | |      
+    /  \   __| | __| |  | | ___ | |__| | ___  ___| |_ ___ 
+   / /\ \ / _` |/ _` |  | |/ _ \|  __  |/ _ \/ __| __/ __|
+  / ____ \ (_| | (_| |  | | (_) | |  | | (_) \__ \ |_\__ \
+ /_/    \_\__,_|\__,_|  |_|\___/|_|  |_|\___/|___/\__|___/
+"@ -ForegroundColor Yellow
+Write-Host @"
+			Gɪᴛʜᴜʙ.ᴄᴏᴍ/ʏᴍᴜᴜᴜᴜ
+"@ -ForegroundColor Red
+
+
 # Check admin privileges
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs

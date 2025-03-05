@@ -6,7 +6,7 @@ A PowerShell script to simplify adding entries to **Windows** and **WSL (Kali Li
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Features ✨
-- **Cross-Platform Support**: Updates hosts files for both Windows and WSL (Kali Linux **ONLY**).
+- **Cross-Platform Support**: Updates hosts files for both Windows and WSL (Kali Linux) (See below if you want other distros).
 - **Automatic Backups**: Creates `hosts.bak` on first run for easy recovery.
 - **Duplicate Prevention**: Skips existing entries to avoid clutter.
 - **Admin-Friendly**: Auto-elevates to admin rights when needed.
@@ -52,6 +52,31 @@ Copy-Item "$env:SystemRoot\System32\drivers\etc\hosts.bak" "$env:SystemRoot\Syst
 ### WSL (Kali Linux)
 ```bash
 sudo cp /etc/hosts.bak /etc/hosts
+```
+## Will It Work with Other WSL Distributions?
+Yes! You can easily modify it to work with any WSL distribution (e.g., Ubuntu, Debian). Here’s how:
+
+1. Check Your WSL Distribution Name
+Run this in PowerShell to list installed WSL distros:
+
+```powershell
+wsl -l -q
+```
+Example output:
+```
+Ubuntu
+kali-linux
+Debian
+```
+2. Update the Script
+Replace kali-linux in the script with your distribution name. For example:
+
+```powershell
+# For Ubuntu
+wsl -d Ubuntu -u root bash -c ...
+
+# For Debian
+wsl -d Debian -u root bash -c ...
 ```
 
 ## Security Note 🔒
